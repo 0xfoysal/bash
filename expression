@@ -1,0 +1,4 @@
+#!/bin/bash
+read -r expression
+result="$(echo "$expression" | bc -l)"
+printf %.3f "$result"
