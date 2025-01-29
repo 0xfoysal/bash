@@ -2,3 +2,23 @@
 read -r expression
 result="$(echo "$expression" | bc -l)"
 printf %.3f "$result"
+
+
+-------------
+get avg number
+
+read range
+sum=0 
+for ((i=1; i<=range; i++))
+do
+    read a
+    sum=$(echo "$sum + $a" | bc -l)
+done
+
+# Calculate average and print with three decimal places
+avg=$(echo "scale=3; $sum / $range" | bc -l)
+printf "%.3f\n" "$avg"
+
+
+
+
