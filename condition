@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Read input values
+read -p "Enter first integer (X): " x
+read -p "Enter second integer (Y): " y
+
+# Compare the values and print the result
+if ((x < y)); then
+    echo "X is less than Y"
+elif ((x > y)); then
+    echo "X is greater than Y"
+else
+    echo "X is equal to Y"
+fi
